@@ -30,7 +30,7 @@ app.get('/api/:creature', (req, res) => {
 	else res.json(creatures['unknown'])
 })
 
-app.listen(PORT, ()=> {
+app.listen(process.env.PORT || PORT, ()=> {
 	console.log(`Server is running at ${PORT}`)
 })
 
